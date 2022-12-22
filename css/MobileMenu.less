@@ -1,0 +1,61 @@
+@import "Base";
+
+// Animations
+@keyframes MobileMenuShow {
+    from { left: -100%; }
+    to { left: 0; }
+}
+
+@keyframes MobileMenuHide {
+    from { left: 0; }
+    to { left: -100%; }
+}
+// -----------------------------------------------------
+
+
+// Mobile Left Menu
+#MobileMenuContainer{
+    z-index: 3;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+
+    #LogoFecharBtnContainer{
+        .flex-row();
+        align-items: center;
+        min-height: 70px;
+        width: 100%;
+
+        .ImgContainerMobile{
+            .flex-center();
+            height: 70%;
+            min-width: auto;
+            margin-left: 2vw;
+    
+            img{
+                height: 100%;
+                width: 100%;
+            }
+        }
+
+        #MobileFecharBtn{
+            .flex-center();
+            margin-left: auto;
+            margin-right: 10px;
+            min-width: 50px;
+            height: 70%;
+            border: 1px solid red;
+
+            i{
+                .flex-center();
+                font-size: 40px;
+                color: #FFFFFF;
+            }
+        }
+    }
+}

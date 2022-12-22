@@ -1,0 +1,94 @@
+@import "Base";
+
+
+
+#MainContainer{
+    .flex-col();
+    width: 100vw;
+    height: auto;
+
+    #TopBanner{
+        .flex-center();
+        height: 550px;
+        width: 100%;
+        background-image: url("../resources/Index/Banner2.png");
+        background-color: #090909;
+
+        // Box do meio do banner para colocar coisa
+        #BannerConteudo{
+            .flex-row();
+            width: 85%;
+            height: 65%;
+            border: 1px solid white;
+
+            // Caixa Left => Nome + Descricao
+            #LeftConteudo{
+                .flex-col();
+                .flex-center();
+                height: 100%;
+                width: 60%;
+                font-family: 'Bai Jamjuree', sans-serif;
+
+                // Caixa Inner Centralizadora
+                #LeftConteudoInner{
+                    .flex-col();
+                    height: 80%;
+                    width: 80%;
+                    border: 1px solid palevioletred;
+
+                    // Height fixo, descricao => flex: 1;
+                    #TopBannerTitle{
+                        display: flex;
+                        align-items: flex-end;
+                        width: auto;
+                        align-self: flex-start;
+                        min-height: 100px;
+                        font-size: 30px;
+                        font-weight: 900;
+                        border: 1px solid orange;
+                        // testar tirar o -webkit do -webkit-linear-gradient => linear gradient nativo do css eh
+                        // mais claro q o do webkit aparentemente
+                        background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(255,199,0,1) 0%, rgba(255,138,0,1) 100%);
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                    }
+                    #TopBannerDescricao{
+                        display: flex;
+                        width: 80%;
+                        flex: 1;
+                        font-size: 36px;
+                        font-weight: 900;
+                        color: #FFFFFF;
+                        border: 1px solid orange;
+                    }
+                }
+            }
+            // Stream da Twitch Embedded
+            #RightConteudo{
+                display: flex;
+                align-items: center;
+                height: 100%;
+                width: 40%;
+
+                #Twitch-Embed{
+                    .flex-center();
+                    height: 70%;
+                    width: 80%;
+                }
+            }
+        }
+    }
+
+    // Container Proximos Eventos
+
+    #ProximosEventosContainer{
+        .flex-col();
+        width: 100vw;
+        height: 900px;
+        background-color: aquamarine;
+    }
+
+
+
+// FIM DO MAIN CONTAINER 
+}
